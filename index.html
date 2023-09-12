@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="MartinXCVI">
+    <meta name="description" content="Welcome to our suscription form!">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Google Font 'Playfair Display' (weight: 400, 600) {font-family: 'Playfair Display', serif;}-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <!----------------------------------------------------------------------------------------------->
+    <!--Google Font 'Roboto' (weight: 400, 700) {font-family: 'Roboto', sans-serif;}-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-------------------------------------------------------------------------------->
+    <!-------------CSS Stylesheet-------------->
+    <link rel="stylesheet" href="css/style.css">
+    <!----------------------------------------->
+    <title>Suscription Form</title>
+</head>
+
+<!---------------------->
+<!---------------------->
+
+<body>
+    <!---Header--->
+    <header id="Header">
+        <h1 id="Title">Lovecraftian World</h1>
+        <p id="Description">Here you have our form to subscribe to our weekly newsletter:</p>
+    </header>
+    <!------------>
+
+    <!--Main: Beginning-->
+    <main id="Principal">
+
+        <!---Formulary--->
+        <form id="Formu">
+            <!--Personal data fieldset-->
+            <fieldset class="field1">
+                <div class="division">
+                    <label for="name" id="name-label">Name</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                </div>
+                <div class="division">
+                    <label for="email" id="email-label">Email</label>
+                    <input type="email" id="email" placeholder="Enter your Email" required>
+                </div>
+                <div class="division">
+                    <label for="number" id="number-label">Age</label>
+                    <input type="number" id="number" placeholder="Age" min="18" max="120" required>
+                </div>
+            </fieldset>
+            <!-------------------------->
+            <!--Location fieldset--->
+            <fieldset class="field2">
+                <p class="select-text">Where are you from?</p>
+                    <select name="dropdownlist" id="dropdown">
+                    <option value="africa">Africa</option>
+                    <option value="antarctica">Antarctica Continent</option>
+                    <option value="american-continent" selected>American Continent</option>
+                    <option value="asia">Asia</option>
+                    <option value="europe">Europe</option>
+                    <option value="oceania">Oceania</option>
+                </select>
+            </fieldset>
+            <!---------------------->
+            <!------Third fieldset------>
+            <fieldset class="field3">
+                <p class="select-text">How would you primarily describe yourself?</p>
+                <div class="radio-division">
+                    <input class="inline" type="radio" id="radio1" value="rad1" name="radio">
+                    <label for="radio1">Lovecraftian</label>
+                </div>
+                <div class="radio-division">
+                    <input class="inline" type="radio" id="radio2" value="rad2" name="radio"> 
+                    <label for="radio2">Enthusiast</label>
+            </div>
+                
+                
+            </fieldset>
+            <!-------------------------->
+            <!-----Fourth fieldset------>
+            <fieldset class="field4"><p class="select-text">Choose your favourite masterpieces!</p>
+                <div class="check-division">
+                    <input type="checkbox" id="check1" name="checkbox1" value="first-checkbox">
+                    <label for="check1">The Call of Cthulhu</label>
+                </div>
+                <div class="check-division">
+                    <input type="checkbox" id="check2" name="checkbox2" value="second-checkbox">
+                    <label for="check2">The Shadow Over Innsmouth</label>
+                </div>
+                <div class="check-division"></label>
+                    <input type="checkbox" id="check3" name="checkbox3" value="third-checkbox">
+                    <label for="check3">The Whisperer in Darkness</label>
+                </div>
+                <div class="check-division">
+                    <input type="checkbox" id="check4" name="checkbox4" value="fourth-checkbox"> 
+                    <label for="check4">The Dunwich Horror</label>
+                </div>
+                <div class="check-division">
+                    <input type="checkbox" id="check5" name="checkbox5" value="fifth-checkbox">
+                    <label for="check5">At The Mountains of Madness</label>
+                </div>
+            </fieldset>
+            <!-------------------------->
+            <!------Fifth fieldset------>
+            <fieldset class="field5">
+                <p class="select-text">Any idea or suggestion you would like to share with us?</p>
+                <!----------------------TEXT AREA---------------------->
+                <textarea cols="35" rows="5" name="comments"></textarea>
+                <!----------------------------------------------------->
+            </fieldset>
+            <!-------------------------->
+            <!----Submit button---->
+            <input class="submit" type="submit" id="submit" value="Subscribe!">
+            <!--------------------->
+        </form>
+        <!--------------->
+
+  </main>
+  <!----Main: End------>
+</body>
+</html>
