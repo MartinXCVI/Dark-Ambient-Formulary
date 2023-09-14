@@ -16,11 +16,52 @@
 }
 /*---------------------------------------*/
 
+/*-------------HOVER/FOCUS--------------*/
+
+.hover-input:hover {
+    box-shadow: 0em 0.3em 0.2em darkgreen;
+    transition: 0.5s linear;
+}
+
+#submit:hover {
+    box-shadow: 0em 0.3em 0.2em darkgreen;
+    transition: 0.5s linear;
+}
+
+#Formu:hover {
+    box-shadow: 0em 0.4em 0.2em darkgreen;
+    transition: 0.5s linear;
+}
+
+/*--------------------------------------*/
+
 /*---------------GENERAL CSS--------------*/
 
   body {
     background-color: var(--NeutralBlack);
     width: 100%;
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  #Formu {
+    box-shadow: 0em 0.3em 0.1em darkgray;
+    opacity: 0.9;
+  }
+
+  .spheres {
+    background-color: darkgreen;
+    width: 6px;
+    height: 6px;
+    border-radius: 2em;
+    position: absolute;
+    transition: 3s all;
+    z-index: -1;
+    box-shadow: 0em 0em 0.4em 0.1em lightgreen;
+  }
+
+  #Principal {
+    z-index: 100;
   }
 
 /*----------------------------------------*/
@@ -30,7 +71,7 @@
 @media all and (min-width: 320px) {
 
     #Header {
-    margin-bottom: 2em;
+    margin-bottom: 1em;
  }
 
     #Title {
@@ -53,7 +94,7 @@
 
     #Principal {
         width: 100%;
-        padding-bottom: 2em;
+        margin-bottom: 2em;
   }
 
     #Formu {
@@ -93,12 +134,12 @@
         display: flex; flex-direction: row; justify-content: flex-start; align-items: center;
     }
 
-    .field1, .field2, .field3, .field4, .field5 {
+    .field1, .field2, .field3, .field4 {
         border: none;
   }
 
     label {
-        font-family: Tahoma;
+        font-family: var(--TextFontRoboto);
         font-size: 0.8em;
         color: var(--TextWhite);
         display: block;
@@ -119,7 +160,7 @@
         margin-right: 0.5em;
     }
 
-    .select-text {
+    .legend-text {
         font-family: var(--TextFontRoboto);
         font-size: 1em;
         margin-bottom: 0.5em;
@@ -140,18 +181,22 @@
         margin-right: 0.5em
     }
 
-    textarea {
-        resize: none;
+    .submit {
         width: 100%;
-        border-radius: 1em;
+        color: var(--NeutralBlack);
+        font-family: var(--TextFontRoboto);
+        font-size: 1em;
+        font-weight: 700;
+        text-align: center;
+        box-shadow: 0em 0.3em 0em darkgray;
+    };
+
+    .submit:active {
+        box-shadow: none;
+        transform: translateY(0.3em);
     }
 
-    .submit {
-        color: darkred;
-        font-family: Tahoma;
-        font-size: 1em;
-        text-align: center
-    };
+
 }
 /*-----------------END: 320px-----------------*/
 
@@ -190,4 +235,78 @@
 }
 
 /*-----------------END: 768px-----------------*/
-  
+
+/*-------------------1024px-------------------*/
+
+@media all and (min-width:1024px) {
+
+    #Principal {
+        padding-bottom: 2.5em;
+  }
+
+    #Formu {
+        width: 50%;
+    }
+
+    .division {
+        flex-direction: row; justify-content:space-between; align-items: center;
+    }
+
+    #name, #email, #number {
+        width: 90% !important; 
+        max-width: 90% !important;
+    }
+
+    .divison label {
+        width: 10% !important;
+        min-width: 10% !important;
+    }
+
+    .field1 {
+        margin-bottom: 0.5em;
+    }
+
+    .field5 {
+        flex-direction: row; justify-content: flex-end; align-items: center;
+        margin-bottom: 0.5em;
+    }
+
+}
+
+/*-----------------END: 1024px----------------*/
+
+/*-------------------1200px-------------------*/
+
+@media all and (min-width: 1200px) {
+
+    #Formu {
+        width: 45%;
+    }
+
+}
+
+/*-----------------END: 1200px----------------*/
+
+/*-------------------1366px-------------------*/
+
+@media all and (min-width: 1366px) {
+
+    #Formu {
+        width: 40%;
+    }
+    
+}
+
+/*-----------------END: 1366px----------------*/
+
+/*-------------------1440px-------------------*/
+
+@media all and (min-width: 1440px) {
+
+    #Formu {
+        width: 38%;
+    }
+
+}
+
+/*-----------------END: 1366px----------------*/
