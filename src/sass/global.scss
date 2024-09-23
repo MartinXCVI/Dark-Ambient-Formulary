@@ -1,0 +1,34 @@
+@use './includes/colors' as color;
+@use './includes/mixins' as mx;
+
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: color.$neutralBlack;
+  width: 100%;
+  z-index: 1;
+}
+
+#principal {
+  width: 100%;
+  min-height: 100vh;
+  @include mx.flexColCenter();
+  padding: 2rem 0rem;
+  z-index: 100;
+}
+
+.spheres {
+  background-color: darkgreen;
+  width: 6px;
+  height: 6px;
+  border-radius: 2em;
+  position: absolute;
+  transition: 3s all;
+  z-index: -5;
+  box-shadow: 0em 0em 0.4em 0.1em lightgreen;
+}

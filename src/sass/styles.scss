@@ -1,0 +1,15 @@
+// Global styles
+
+@use './global.scss';
+
+// Includes
+
+@use './includes/colors';
+@use './includes/mixins';
+@use './includes/typography';
+@use './includes/variables';
+
+// Components
+
+@use './components/heading.scss';
+@use './components/contactForm.scss';
