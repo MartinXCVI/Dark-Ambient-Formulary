@@ -33,12 +33,12 @@ function App() {
       moveSpheres()
       const interval = setInterval(()=> {
         moveSpheres()
-      }, 5000)
+      }, 3500)
       return ()=> clearInterval(interval)
     }, [moveSpheres])
 
     const renderSpheres = () => {
-      return Array.from({ length: 40 }).map((_, index) => (
+      return Array.from({ length: 45 }).map((_, index) => (
         <div
           key={index}
           ref={(sphere) => setSphereRef(sphere, index)}
